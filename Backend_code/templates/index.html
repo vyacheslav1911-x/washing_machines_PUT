@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <title>DS-1 WM</title>
+    <style>
+      body {
+        background-color: #e8e8e7;
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      img {
+        width: 200px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pralka 1</h1>
+
+    {% if msgs %}
+      <ul>
+        {% for m in msgs %}
+          <li>{{ m }}</li>
+
+          {% if "Working/Dziala" in m %}
+            <img src="{{ url_for('static', filename='working.gif') }}" alt="Working">
+          
+          {% elif "Going to be ready soon" in m %}
+            <img src="{{ url_for('static', filename='sp_fast.gif') }}" alt="In Progress">
+
+          {% elif "Not working/nie dziala" in m %}
+            <img src="{{ url_for('static', filename='DONE.PNG') }}" alt="Finished">
+          
+          {% else %}
+            <img src="{{ url_for('static', filename='unknown.gif') }}" alt="Unknown">
+          {% endif %}
+
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p><i>NOTHING..</i></p>
+    {% endif %}
+    <h1>Pralka 2</h1>
+
+    {% if msgs2 %}
+      <ul>
+        {% for m in msgs2 %}
+          <li>{{ m }}</li>
+
+          {% if "Working/Dziala" in m %}
+            <img src="{{ url_for('static', filename='working.gif') }}" alt="Working">
+          
+          {% elif "Going to be ready soon" in m %}
+            <img src="{{ url_for('static', filename='sp_fast.gif') }}" alt="In Progress">
+
+          {% elif "Not working/nie dziala" in m %}
+            <img src="{{ url_for('static', filename='DONE.PNG') }}" alt="Finished">
+          
+          {% else %}
+            <img src="{{ url_for('static', filename='unknown.gif') }}" alt="Unknown">
+          {% endif %}
+
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p><i>NOTHING..</i></p>
+    {% endif %}
+  </body>
+</html>
