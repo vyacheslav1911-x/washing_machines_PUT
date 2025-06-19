@@ -24,4 +24,3 @@ This project is an IoT-based monitoring system for washing machines in dormitori
 
 ---
 
-## 📡 System Architecture
