@@ -9,7 +9,7 @@ This project is an IoT-based monitoring system for washing machines in dormitori
 
 - 🧠 Detects washing machine state using vibration data (MPU6050)
 - 📡 Sends real-time updates over Wi-Fi (ESP32)
-- 🌐 RESTapi Flask backend with SQLite/MySQL support
+- 🌐 RESTapi Flask backend 
 - 🖼️ Web interface with dynamic images/GIFs for each machine status
 - 🔌 Designed for 24/7 operation with durable power supply setup
 
